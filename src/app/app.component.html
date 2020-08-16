@@ -78,7 +78,7 @@
       <div class="w3-light-grey">
         <img src="../assets/images/img2.JPG" alt="Jane" style="width:100%">
         <div class="w3-container">
-          <h3>Ganzkörpermassage</h3>
+          <h3 style="word-wrap: break-word">Ganzkörpermassage</h3>
           <p class="w3-opacity">45 € — 90 Min</p>
         </div>
       </div>
@@ -96,7 +96,7 @@
       <div class="w3-light-grey">
         <img src="../assets/images/img6.JPG" alt="Mike" style="width:100%">
         <div class="w3-container">
-          <h3>Kosmetikmassage</h3>
+          <h3 style="word-wrap: break-word">Kosmetikmassage</h3>
           <p class="w3-opacity">15 € — 25 Min</p>
         </div>
       </div>
@@ -176,7 +176,7 @@
     </p>
     <p *ngIf="!feedbackThanks">Haben Sie eine Frage? Kontaktieren Sie mich gerne!</p>
     <p *ngIf="feedbackThanks">Danke für Ihre anfrage! Ich werde Ihnen kontaktieren.</p>
-    <form (ngSubmit)="onSubmit(contactForm)" #contactForm="ngForm" target="_blank">
+    <form (ngSubmit)="onSubmit(contactForm2)" #contactForm2="ngForm" target="_blank">
       <div class="w3-section">
         <label>Name</label>
         <input class="w3-input w3-border" type="text" name="Name" ngModel #name="ngModel" required placeholder="Max Mustermann">
