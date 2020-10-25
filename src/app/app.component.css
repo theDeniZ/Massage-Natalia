@@ -21,3 +21,7 @@ iframe {
     max-width: 100%;
     border: 0;
 }
+
+.w3-jumbo {
+  font-size: 40px!important;
+}

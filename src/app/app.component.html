@@ -28,9 +28,10 @@
 <div class="w3-main" style="margin-left:340px;margin-right:40px">
 
   <!-- Services -->
-  <div class="w3-container" id="services" style="margin-top:75px">
-    <h1 class="w3-jumbo"><b>Herzlich willkommen!</b></h1>
-    <h1 class="w3-xxxlarge w3-text-red"><b>Klassische Massage.</b></h1>
+  <div id="services"></div>
+  <div class="w3-container" style="margin-top:75px">
+    <h1 class="w3-xxlarge"><b>Ich begrüße Ihnen herzlich!</b></h1>
+    <h1 class="w3-xlarge w3-text-red"><b>Klassische Massage</b></h1>
     <hr style="width:50px;border:5px solid red" class="w3-round">
     <p>Die traditionelle klassische Massage: voll wohltuender & tiefgreifender Wirkung</p>
     <p>
@@ -39,8 +40,9 @@
   </div>
 
   <!-- Designers -->
-  <div class="w3-container" id="massagen" style="margin-top:75px">
-    <h1 class="w3-xxxlarge w3-text-red"><b>Massagen.</b></h1>
+  <div id="massagen"></div>
+  <div class="w3-container" style="margin-top:75px">
+    <h1 class="w3-xlarge w3-text-red"><b>Massagen</b></h1>
     <hr style="width:50px;border:5px solid red" class="w3-round">
     <p>
       Ich biete Wellness und Therapeutische Massagen an. Vor allem:
@@ -104,8 +106,9 @@
   </div>
 
   <!-- Contact -->
-  <div class="w3-container" id="termin" style="margin-top:75px">
-    <h1 class="w3-xxxlarge w3-text-red"><b>Termin buchen.</b></h1>
+  <div id="termin"></div>
+  <div class="w3-container" style="margin-top:75px">
+    <h1 class="w3-xlarge w3-text-red"><b>Termin buchen</b></h1>
     <hr style="width:50px;border:5px solid red" class="w3-round">
     <p *ngIf="!feedbackThanks">Bitte, füllen Sie diese Form aus</p>
     <p *ngIf="feedbackThanks">Danke für Ihre anfrage! Ich werde Ihnen kontaktieren.</p>
@@ -127,16 +130,21 @@
   </div>
 
   <!-- Header -->
-  <div class="w3-container" style="margin-top:80px" id="fotos">
-    <h1 class="w3-xxxlarge w3-text-red"><b>Fotos.</b></h1>
+  <div id="fotos"></div>
+  <div class="w3-container" style="margin-top:80px">
+    <h1 class="w3-xlarge w3-text-red"><b>Fotos</b></h1>
     <hr style="width:50px;border:5px solid red" class="w3-round">
   </div>
   <!-- Photo grid (modal) -->
-  <div class="w3-row-padding">
-    <div class="w3-half" style="width: 100%;">
-      <img src="../assets/images/img3.jpeg" style="width:32%" onclick="onClick(this)" alt="Gutschein">
-      <img src="../assets/images/img4.jpeg" style="width:32%" onclick="onClick(this)" alt="Komik">
-      <img src="../assets/images/img5.jpeg" style="width:32%" onclick="onClick(this)" alt="Arbeitsplatz">
+  <div class="w3-row-padding w3-grayscale">
+    <div class="w3-col m4 w3-margin-bottom">
+      <img src="../assets/images/img7.png" style="width:100%" onclick="onClick(this)" alt="Gutschein">
+    </div>
+    <div class="w3-col m4 w3-margin-bottom">
+      <img src="../assets/images/img4.jpeg" style="width:100%" onclick="onClick(this)" alt="Komik">
+    </div>
+    <div class="w3-col m4 w3-margin-bottom">
+      <img src="../assets/images/img5.jpeg" style="width:100%" onclick="onClick(this)" alt="Arbeitsplatz">
     </div>
   </div>
 
@@ -150,8 +158,9 @@
   </div>
 
   <!-- Preview -->
-  <div class="w3-container video-wrap" id="vorschau" style="margin-top:75px">
-    <h1 class="w3-xxxlarge w3-text-red"><b>Vorschau.</b></h1>
+  <div id="vorschau" ></div>
+  <div class="w3-container video-wrap" style="margin-top:75px">
+    <h1 class="w3-xlarge w3-text-red"><b>Vorschau</b></h1>
     <hr style="width:50px;border:5px solid red" class="w3-round">
     <div class="video-container">
       <iframe width="560" height="315"  src="https://www.youtube.com/embed/H8VGZqaFcXE" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
@@ -159,8 +168,9 @@
   </div>
 
   <!-- Map -->
-  <div class="w3-container video-wrap" id="map" style="margin-top:75px">
-    <h1 class="w3-xxxlarge w3-text-red"><b>Karten.</b></h1>
+  <div id="map"></div>
+  <div class="w3-container video-wrap" style="margin-top:75px">
+    <h1 class="w3-xlarge w3-text-red"><b>Karten</b></h1>
     <hr style="width:50px;border:5px solid red" class="w3-round">
     <div class="video-container">
       <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2626.406729509223!2d9.815045115673415!3d48.83138007928485!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0xcd3d46936d7c1278!2sMassage!5e0!3m2!1sde!2sde!4v1595267005603!5m2!1sde!2sde" width="600" height="450" frameborder="0" style="border:0;" allowfullscreen="" aria-hidden="false" tabindex="0"></iframe>
@@ -168,8 +178,9 @@
   </div>
 
   <!-- Contact -->
-  <div class="w3-container" id="contact" style="margin-top:75px">
-    <h1 class="w3-xxxlarge w3-text-red"><b>Kontakt.</b></h1>
+  <div id="contact"></div>
+  <div class="w3-container" style="margin-top:75px">
+    <h1 class="w3-xlarge w3-text-red"><b>Kontakt</b></h1>
     <hr style="width:50px;border:5px solid red" class="w3-round">
     <p>
       Sie können mich unter <b>+49 176 82791854‬</b> (auch per WhatsApp) erreichen!
@@ -197,4 +208,4 @@
 </div>
 
 <!-- W3.CSS Container -->
-<div class="w3-light-grey w3-container w3-padding-32" style="margin-top:75px;padding-right:58px"><p class="w3-right">Powered by <a href="https://www.w3schools.com/w3css/default.asp" title="W3.CSS" target="_blank" class="w3-hover-opacity">w3.css</a></p></div>
+<div class="w3-light-grey w3-container w3-padding-32" style="margin: auto;"><p class="w3-center">Powered by <a href="https://www.w3schools.com/w3css/default.asp" title="W3.CSS" target="_blank" class="w3-hover-opacity">w3.css</a></p></div>
