@@ -1,24 +1,77 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>Massage Natalia</title>
+  <base href="/">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="icon" type="image/x-icon" href="favicon.ico">
+  <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Poppins">
+  <style>
+    body,h1,h2,h3,h4,h5 {font-family: "Poppins", sans-serif}
+    body {font-size:16px;}
+    .w3-half img{margin-bottom:-6px;margin-top:16px;opacity:0.8;cursor:pointer}
+    .w3-half img:hover{opacity:1}
+  </style>
+  <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js" />  
+  <script>
+    // Script to open and close sidebar
+    function w3_open() {
+      document.getElementById("mySidebar").style.display = "block";
+      document.getElementById("myOverlay").style.display = "block";
+    }
+
+    function w3_close() {
+      document.getElementById("mySidebar").style.display = "none";
+      document.getElementById("myOverlay").style.display = "none";
+    }
+
+    // Modal Image Gallery
+    function onClick(element) {
+      document.getElementById("img01").src = element.src;
+      document.getElementById("modal01").style.display = "block";
+      var captionText = document.getElementById("caption");
+      captionText.innerHTML = element.alt;
+    }
+  </script>
+
+  <!--  Tracking-->
+  <!-- Global site tag (gtag.js) - Google Analytics -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=UA-176069812-1"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+
+    gtag('config', 'UA-176069812-1');
+  </script>
+
+
+  <!--  Tracking-->
+</head>
+<body>
+  
 <!-- Sidebar/menu -->
 <nav class="w3-sidebar w3-red w3-collapse w3-top w3-large w3-padding" style="z-index:3;width:300px;font-weight:bold;" id="mySidebar"><br>
   <a href="javascript:void(0)" onclick="w3_close()" class="w3-button w3-hide-large w3-display-topleft" style="width:100%;font-size:22px">Close Menu</a>
   <div class="w3-container">
-    <h3 class="w3-padding-64"><b>{{title}}</b></h3>
+    <h3 class="w3-padding-64"><b>Massage Natalia</b></h3>
   </div>
   <div class="w3-bar-block">
     <a href="#" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-white">Herzlich willkommen</a>
     <a href="#massagen" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-white">Massagen</a>
-    <a href="#termin" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-white">Termin buchen</a>
     <a href="#fotos" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-white">Fotos</a>
     <a href="#vorschau" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-white">Vorschau</a>
+    <a href="#termin" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-white">Termin buchen & Kontakt</a>
     <a href="#map" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-white">Karten</a>
-    <a href="#contact" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-white">Kontakt</a>
   </div>
 </nav>
 
 <!-- Top menu on small screens -->
 <header class="w3-container w3-top w3-hide-large w3-red w3-xlarge w3-padding">
   <a href="javascript:void(0)" class="w3-button w3-red w3-margin-right" onclick="w3_open()">☰</a>
-  <span>{{title}}</span>
+  <span>Massage Natalia</span>
 </header>
 
 <!-- Overlay effect when opening sidebar on small screens -->
@@ -78,55 +131,31 @@
   <div class="w3-row-padding w3-grayscale">
     <div class="w3-col m4 w3-margin-bottom">
       <div class="w3-light-grey">
-        <img src="../assets/images/img2.JPG" alt="Jane" style="width:100%">
+        <img src="assets/images/img2.JPG" alt="Ganzkörpermassage" style="width:100%">
         <div class="w3-container">
           <h3 style="word-wrap: break-word">Ganzkörpermassage</h3>
-          <p class="w3-opacity">45 € — 90 Min</p>
+          <p class="w3-opacity">50 € — 90 Min</p>
         </div>
       </div>
     </div>
     <div class="w3-col m4 w3-margin-bottom">
       <div class="w3-light-grey">
-        <img src="../assets/images/img1.JPG" alt="Klassische Massage" style="width:100%">
+        <img src="assets/images/img1.JPG" alt="Klassische Massage" style="width:100%">
         <div class="w3-container">
           <h3>Klassische Massage</h3>
-          <p class="w3-opacity">30 € — 60 Min</p>
+          <p class="w3-opacity">35 € — 60 Min</p>
         </div>
       </div>
     </div>
     <div class="w3-col m4 w3-margin-bottom">
       <div class="w3-light-grey">
-        <img src="../assets/images/img6.JPG" alt="Mike" style="width:100%">
+        <img src="./assets/images/img6.JPG" alt="Kosmetikmassage" style="width:100%">
         <div class="w3-container">
           <h3 style="word-wrap: break-word">Kosmetikmassage</h3>
           <p class="w3-opacity">15 € — 25 Min</p>
         </div>
       </div>
     </div>
-  </div>
-
-  <!-- Contact -->
-  <div id="termin"></div>
-  <div class="w3-container" style="margin-top:75px">
-    <h1 class="w3-xlarge w3-text-red"><b>Termin buchen</b></h1>
-    <hr style="width:50px;border:5px solid red" class="w3-round">
-    <p *ngIf="!feedbackThanks">Bitte, füllen Sie diese Form aus</p>
-    <p *ngIf="feedbackThanks">Danke für Ihre anfrage! Ich werde Ihnen kontaktieren.</p>
-    <form (ngSubmit)="onSubmit(contactForm)" #contactForm="ngForm" target="_blank">
-      <div class="w3-section">
-        <label>Name</label>
-        <input class="w3-input w3-border" type="text" name="Name" ngModel #name="ngModel" required placeholder="Max Mustermann">
-      </div>
-      <div class="w3-section">
-        <label>Kontakt Informationen</label>
-        <input class="w3-input w3-border" type="text" name="Email" ngModel #email="ngModel" required placeholder="Email / Handynummer">
-      </div>
-      <div class="w3-section">
-        <label>Nachricht</label>
-        <input class="w3-input w3-border" type="text" name="Message" ngModel #message="ngModel" required placeholder="Welche Massage, Wann, Vormittag / Nachmittag?">
-      </div>
-      <button type="submit" class="w3-button w3-block w3-padding-large w3-red w3-margin-bottom">Anfrage absenden</button>
-    </form>
   </div>
 
   <!-- Header -->
@@ -138,13 +167,13 @@
   <!-- Photo grid (modal) -->
   <div class="w3-row-padding w3-grayscale">
     <div class="w3-col m4 w3-margin-bottom">
-      <img src="../assets/images/img7.png" style="width:100%" onclick="onClick(this)" alt="Gutschein">
+      <img src="./assets/images/img7.png" style="width:100%" onclick="onClick(this)" alt="Gutschein">
     </div>
     <div class="w3-col m4 w3-margin-bottom">
-      <img src="../assets/images/img4.jpeg" style="width:100%" onclick="onClick(this)" alt="Komik">
+      <img src="./assets/images/img4.jpeg" style="width:100%" onclick="onClick(this)" alt="Komik">
     </div>
     <div class="w3-col m4 w3-margin-bottom">
-      <img src="../assets/images/img5.jpeg" style="width:100%" onclick="onClick(this)" alt="Arbeitsplatz">
+      <img src="./assets/images/img5.jpeg" style="width:100%" onclick="onClick(this)" alt="Arbeitsplatz">
     </div>
   </div>
 
@@ -167,6 +196,31 @@
     </div>
   </div>
 
+  <!-- Contact -->
+  <div id="termin"></div>
+  <div class="w3-container" style="margin-top:75px">
+    <h1 class="w3-xlarge w3-text-red"><b>Termin buchen & Kontakt</b></h1>
+    <hr style="width:50px;border:5px solid red" class="w3-round">
+    <p>Sie können mich unter <b>+49 176 82791854</b> (auch per WhatsApp) erreichen!</p>
+    <p>Haben Sie eine Frage? Kontaktieren Sie mich gerne!</p>
+    <form id="contact-form" action="https://formspree.io/mnqglawl" method="post">
+      <p>Bitte, füllen Sie diese Form aus</p>
+      <div class="w3-section">
+        <label>Name</label>
+        <input class="w3-input w3-border" type="text" name="Name" required placeholder="Max Mustermann">
+      </div>
+      <div class="w3-section">
+        <label>Kontakt Informationen</label>
+        <input class="w3-input w3-border" type="email" name="Email" required placeholder="Email">
+      </div>
+      <div class="w3-section">
+        <label>Nachricht</label>
+        <input class="w3-input w3-border" type="text" name="Message" required placeholder="Welche Massage, Wann, Vormittag / Nachmittag?">
+      </div>
+      <button type="submit" class="w3-button w3-block w3-padding-large w3-red w3-margin-bottom">Anfrage absenden</button>
+    </form>
+  </div>
+
   <!-- Map -->
   <div id="map"></div>
   <div class="w3-container video-wrap" style="margin-top:75px">
@@ -177,35 +231,13 @@
     </div>
   </div>
 
-  <!-- Contact -->
-  <div id="contact"></div>
-  <div class="w3-container" style="margin-top:75px">
-    <h1 class="w3-xlarge w3-text-red"><b>Kontakt</b></h1>
-    <hr style="width:50px;border:5px solid red" class="w3-round">
-    <p>
-      Sie können mich unter <b>+49 176 82791854‬</b> (auch per WhatsApp) erreichen!
-    </p>
-    <p *ngIf="!feedbackThanks">Haben Sie eine Frage? Kontaktieren Sie mich gerne!</p>
-    <p *ngIf="feedbackThanks">Danke für Ihre anfrage! Ich werde Ihnen kontaktieren.</p>
-    <form (ngSubmit)="onSubmit(contactForm2)" #contactForm2="ngForm" target="_blank">
-      <div class="w3-section">
-        <label>Name</label>
-        <input class="w3-input w3-border" type="text" name="Name" ngModel #name="ngModel" required placeholder="Max Mustermann">
-      </div>
-      <div class="w3-section">
-        <label>Kontakt Informationen</label>
-        <input class="w3-input w3-border" type="text" name="Email" ngModel #email="ngModel" required placeholder="Email / Handynummer">
-      </div>
-      <div class="w3-section">
-        <label>Nachricht</label>
-        <input class="w3-input w3-border" type="text" name="Message" ngModel #message="ngModel" required>
-      </div>
-      <button type="submit" class="w3-button w3-block w3-padding-large w3-red w3-margin-bottom">Anfrage absenden</button>
-    </form>
-  </div>
-
   <!-- End page content -->
 </div>
 
 <!-- W3.CSS Container -->
 <div class="w3-light-grey w3-container w3-padding-32" style="margin: auto;"><p class="w3-center">Powered by <a href="https://www.w3schools.com/w3css/default.asp" title="W3.CSS" target="_blank" class="w3-hover-opacity">w3.css</a></p></div>
+
+
+
+</body>
+</html>
