@@ -17,9 +17,9 @@
   <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js">
   </script>
   <script>
-    var form = document.getElementById("contact-form");
-    
-    async function handleSubmit(event) {
+    function submitForm(event) {
+      var form = document.getElementById("contact-form");
+
       event.preventDefault();
       var status = document.getElementById("contact-form-status");
       var data = new FormData(event.target);
@@ -36,8 +36,8 @@
       }).catch(error => {
         status.innerHTML = "Oops! There was a problem submitting your form.."
       });
+      return false;
     }
-    form.addEventListener("submit", handleSubmit)
 </script>
   <script>
     // Script to open and close sidebar
@@ -228,7 +228,7 @@
     <p>Sie können mich unter <b>+49 176 82791854</b> (auch per WhatsApp) erreichen!</p>
     <p>Haben Sie eine Frage? Kontaktieren Sie mich gerne!</p>
     <p id="contact-form-status"></p>
-    <form id="contact-form" action="https://formspree.io/mnqglawl" method="post">
+    <form id="contact-form" action="https://formspree.io/mnqglawl" method="post" onsubmit="return submitForm(event)">
       <p>Bitte, füllen Sie diese Form aus</p>
       <div class="w3-section">
         <label>Name</label>
