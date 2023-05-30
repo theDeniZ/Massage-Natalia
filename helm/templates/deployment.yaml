@@ -1,0 +1,30 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: {{ .Chart.Name }}
+  namespace: {{ .Release.Namespace }}
+  labels:
+    app: massage-app
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: massage-app
+  template:
+    metadata:
+      labels:
+        app: massage-app
+    spec:
+      containers:
+        - name: massage-app
+          image: localhost:32000/massage
+          imagePullPolicy: Always
+          resources:
+            requests:
+              cpu: 50m
+              memory: 32Mi
+            limits:
+              cpu: 100m
+              memory: 64Mi
+          ports:
+            - containerPort: 80

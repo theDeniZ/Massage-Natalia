@@ -1,0 +1,4 @@
+apiVersion: v1
+name: massage
+description: Massage Natalia app
+version: 1.0.0

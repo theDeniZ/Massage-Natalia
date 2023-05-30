@@ -1,0 +1,9 @@
+version: "3.9"
+services:
+  massage:
+    image: 192.168.188.33:32000/massage
+    build:
+      dockerfile: Dockerfile
+      context: .
+    ports:
+      - "8080:80"
